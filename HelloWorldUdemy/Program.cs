@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 namespace HelloWorldUdemy
 {
@@ -35,18 +36,78 @@ namespace HelloWorldUdemy
             Console.WriteLine("The sum of " + num1 + " and " + num2 + " is " + sum);
             Console.WriteLine(d1 + " devided by " + d2 + " is " + sumD);
             Console.WriteLine(f1 + " float add by " + f2 + " float is " + f3);
-            Console.Read();
         }
 
         static void StartingMethod() {
             var name = "Richard";
-            Console.WriteLine("Hello " + name + "!");
+            string message = "my name is ";
+            string caseName = name.ToUpper();
+            Console.WriteLine(message + caseName + "!");
+        }
+        static void CodingStandardMethod()
+        {
+            int age = 22;
+            int userAge = 35;
+            //comment help describe the if you cannot use descriptive naming conventions
+            /* multiple line comment
+             * lorus imptum
+             */
         }
 
-        static void Main(string[] args)
+        static void InputTypeMethod()
         {
+            //Console.ForegroundColor = ConsoleColor.Black;
+            //Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.Write("Enter a String and press enter :");
+            string readInput = Console.ReadLine();
+            Console.WriteLine("You have entered {0} ",readInput);
+
+            Console.Write("Enter a String and press enter :");
+            int asciiValue = Console.Read();
+            Console.WriteLine("ASCII value is {0} ", asciiValue);
+            Console.ReadKey();
+            //Console.Clear();
+        }
+        static void ImplicitMethod(){
+            // impicit conversion
+            int num = 12390532;
+            long bigNum = num;
+            Console.WriteLine(bigNum);
+
+            float myFloat = 13.37F;
+            double myNewDouble = myFloat;
+            Console.WriteLine(myNewDouble);
+
+            double myDouble = 13.37;
+            int myInt;
+            // explicit conversion
+            // cast double to int;
+            myInt = (int) myDouble;
+            Console.WriteLine(myInt);
+
+            // typeConversion 
+            string myString = myDouble.ToString(); // "13.37"
+            Console.WriteLine(myString);
+
+            string myFloatString = myFloat.ToString();
+            Console.WriteLine(myFloatString);
+
+            bool sunIsShining = false;
+            string myBoolString = sunIsShining.ToString();
+            Console.WriteLine(myBoolString);
+            Console.Read();
+        }
+
+    static void Main(string[] args)
+        {
+            ImplicitMethod();
+            Console.WriteLine("===================================");
+            InputTypeMethod();
+            Console.WriteLine("===================================");
             StartingMethod();
+            Console.WriteLine("===================================");
             MyTypesMethod();
+            Console.WriteLine("===================================");
             Console.Read();
         }
     }
