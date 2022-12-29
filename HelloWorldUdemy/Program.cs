@@ -149,6 +149,12 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
             Console.WriteLine("\n");
 
+            //instead of using \\ to write files paths we can verbatim string to amke it easier
+            //if you remove the @ you will get an error because \U, \A and \D are not calid escape characters
+            Console.WriteLine(@"C:\Users\richardr\Pictures\GIT.png");
+            Console.WriteLine(@"You \n have no power here!"); 
+            Console.WriteLine("you were meant to destroy the sith \n not join them!");
+
             Console.Read();
         }
 
