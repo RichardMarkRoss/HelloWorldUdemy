@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Xml.Linq;
 
 namespace HelloWorldUdemy
@@ -101,13 +102,16 @@ namespace HelloWorldUdemy
         static void ParsingStringMethod() {
             string myString = "15";
             string mySecondString = "13";
+            string stringForFloat = "0.85"; // datatype should be float
+            string stringForInt = "12345"; // datatype should be int
 
             int num1 = Int32.Parse(myString);
             int num2 = Int32.Parse(mySecondString);
-
+            float num3 = float.Parse(stringForFloat, CultureInfo.InvariantCulture.NumberFormat);
+            int num4 = Int32.Parse(stringForInt);
             int resultInt = num1 + num2;
             string result = myString + mySecondString;
-
+            Console.WriteLine(num3);
             Console.WriteLine(result);
             Console.WriteLine(resultInt);
             Console.Read();
