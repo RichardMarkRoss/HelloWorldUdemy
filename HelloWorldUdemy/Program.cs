@@ -116,8 +116,47 @@ namespace HelloWorldUdemy
             Console.WriteLine(resultInt);
             Console.Read();
         }
-    static void Main(string[] args)
+
+        static void StringManipulationMethod() {
+            int age = 26;
+            string name = "Richard";
+            string job = "Developer";
+
+            //1. string concatenation
+            Console.WriteLine("String Concatenation");
+            Console.WriteLine("Hello my name is "+name+" , I am "+age+" years old");
+            Console.WriteLine("\n");
+
+            //2. string fromatting
+            //string formatting uses index
+            Console.WriteLine("string formatting");
+            Console.WriteLine("Hello my name is {0} , I am {1} years old. I'm a {2}", name, age, job);
+            Console.WriteLine("\n");
+
+            //3. string interpolation
+            //string interpolation uses $ at the start which will allow me to write our variables like this {variableName}
+            Console.WriteLine("string formatting");
+            Console.WriteLine($"Hello my name is {name} , I am {age} years old. I'm a {job}");
+            Console.WriteLine("\n");
+
+            //4. Verbatim strings
+            //verbatim strings start with @ and tells the compiler to take the string
+            //literally and ignore any space and escape characters like \n
+            Console.WriteLine("verbatim strings");
+            Console.WriteLine(@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+            Console.WriteLine("\n");
+
+            Console.Read();
+        }
+
+
+        static void Main(string[] args)
         {
+            StringManipulationMethod();
+            Console.WriteLine("===================================");
             ParsingStringMethod();
             Console.WriteLine("===================================");
             ImplicitMethod();
