@@ -188,12 +188,43 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
             string fullname = string.Concat(firstName, " ", lastName);
             Console.WriteLine($"your full name is {fullname}");
         }
-
-
-        static void Main(string[] args)
+        public static void writeSomething()
         {
             Console.WriteLine($"My birthday is always going to be: {birthday}");
-            Console.ReadKey();
+            Console.Write("Enter first name: ");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Enter age: ");
+            int age = Console.Read();
+            writeSomethingSpecific(firstName, age);
+            Console.WriteLine("add: " + add(15, 31));
+            Console.WriteLine("subtract: " + subtract(15, 31));
+            Console.WriteLine("multiply: " + multiply(15, 31));
+            Console.WriteLine("divide: " + divide(15, 31));
+        }
+        public static void writeSomethingSpecific(string myText, int mystring2)
+        {
+            Console.WriteLine($"HI, my name is {myText}, I am {mystring2} years old");
+        }
+
+        public static int add(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+        public static int subtract(int num1, int num2)
+        {
+            return num1 - num2;
+        }
+        public static int multiply(int num1, int num2)
+        {
+            return num1 * num2;
+        }
+        public static float divide(float num1, float num2)
+        {
+            return num1 / num2;
+        }
+        static void Main(string[] args)
+        {
+            writeSomething();
             //StringChallengeMethod();
             //Console.WriteLine("===================================");
             //StringManipulationMethod();
